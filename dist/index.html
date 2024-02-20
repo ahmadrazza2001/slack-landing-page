@@ -53,6 +53,45 @@
             </div>
           </div>
         </div>
+        <!-- NAV-RESPONSIVE -->
+        <div class="navbar-mobile">
+          <div class="nav-logo">
+            <img src="./assets/slack-logo.png" alt="logo" />
+            <h2 class="logo-text">slack</h2>
+          </div>
+          <div class="nav-items">
+            <ul>
+              <li>
+                <a href="">Features</a>
+              </li>
+              <li>
+                <a href="">Solutions</a>
+              </li>
+              <li>
+                <a href="">Enterprise</a>
+              </li>
+              <li>
+                <a href="">Resources</a>
+              </li>
+              <li>
+                <a href="">Pricing</a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-bars"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-options">
+            <div class="search-icon">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="option-buttons">
+              <button class="nav-option-signin">Signin</button>
+              <button class="nav-option-btn-1">TALK TO SALES</button>
+              <button class="nav-option-btn-2">TRY FOR FREE</button>
+            </div>
+          </div>
+        </div>
 
         <!-- HEADER CONTENT -->
         <div class="header-content">
@@ -526,13 +565,14 @@
     </div>
 
     <script>
-      $(window).scroll(function () {
-        if ($(window).scrollTop()) {
-          $("header").addClass(".white-navbar");
-        } else {
-          $("header").removeClass(".white-navbar");
-        }
-      });
+      function showMobileNav() {
+        const mobileNav = document.querySelector(".navbar-mobile");
+        mobileNav.style.display = "flex";
+      }
+      function hideMobileNav() {
+        const mobileNav = document.querySelector(".navbar-mobile");
+        mobileNav.style.display = "none";
+      }
     </script>
   </body>
 </html>

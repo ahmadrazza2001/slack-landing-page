@@ -1,5 +1,5 @@
 $color-primary: #530653;
-$color-body: rgb(251, 246, 234);
+$color-body: rgb(241, 239, 233);
 $color-secondary: #400440ba;
 $color-primary-shade:#f0d7f0e1;
 $color-blue: rgb(79, 79, 188);
@@ -16,8 +16,18 @@ $font-weights: (
 );
 $font-family: "Lato";
 // $font-family: ;
+// $font-main: Arial, Helvetica, sans-serif;
 $mobile: 800px;
 $tablet: 900px;
 $web: 1000px;
 
-// $font-main: Arial, Helvetica, sans-serif;
+
+//screens
+$breakpoints:(
+    "xs":"max-width: 575.98px",
+    "sm":"(min-width:576px)and(max-width:767.98px)",
+    "md":"(min-width:768px)and(max-width:991.98px)",
+    "lg":"(min-width:992px)and(max-width:1199.98px)",
+    "xl":"(min-width:1200px)and(max-width:1399.98px)",
+    "xxl":"min-width:1400px"    
+);
