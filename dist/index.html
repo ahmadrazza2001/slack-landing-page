@@ -53,6 +53,11 @@
             </div>
           </div>
         </div>
+        <!-- <div class="modal-overlay"></div>
+
+        <div class="modal">
+          <p>hello</p>
+        </div> -->
         <!-- NAV-RESPONSIVE -->
         <div class="navbar-mobile">
           <div class="nav-logo">
@@ -62,7 +67,7 @@
           <div class="nav-items">
             <ul>
               <li>
-                <a href="">Features</a>
+                <a href="#" class="open-modal">Features</a>
               </li>
               <li>
                 <a href="">Solutions</a>
@@ -129,27 +134,29 @@
         <!-- BODY PART -->
         <div class="body-container">
           <div class="body-content">
-            <div class="top-heading">
-              <p>TRUSTED BY COMPANIES ALL OVER THE WORLD</p>
-            </div>
-            <div class="companies-logos">
-              <div class="company-logo">
-                <img src="./assets/comp-logo-1.png" alt="company-logo" />
+            <div class="body-upper-content">
+              <div class="top-heading">
+                <p>TRUSTED BY COMPANIES ALL OVER THE WORLD</p>
               </div>
-              <div class="company-logo">
-                <img src="./assets/comp-logo-2.png" alt="company-logo" />
-              </div>
-              <div class="company-logo">
-                <img src="./assets/comp-logo-3.png" alt="company-logo" />
-              </div>
-              <div class="company-logo">
-                <img src="./assets/comp-logo-4.png" alt="company-logo" />
-              </div>
-              <div class="company-logo">
-                <img src="./assets/comp-logo-5.png" alt="company-logo" />
-              </div>
-              <div class="company-logo">
-                <img src="./assets/comp-logo-6.png" alt="company-logo" />
+              <div class="companies-logos">
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-1.png" alt="company-logo" />
+                </div>
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-2.png" alt="company-logo" />
+                </div>
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-3.png" alt="company-logo" />
+                </div>
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-4.png" alt="company-logo" />
+                </div>
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-5.png" alt="company-logo" />
+                </div>
+                <div class="company-logo">
+                  <img src="./assets/comp-logo-6.png" alt="company-logo" />
+                </div>
               </div>
             </div>
 
@@ -565,6 +572,23 @@
     </div>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openModalLink = document.querySelector(".open-modal");
+        const modalOverlay = document.querySelector(".modal-overlay");
+        const modal = document.querySelector(".modal");
+
+        openModalLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          modal.classList.add("open");
+          modalOverlay.style.display = "block"; // Display the overlay
+        });
+
+        modalOverlay.addEventListener("click", function () {
+          modal.classList.remove("open");
+          modalOverlay.style.display = "none"; // Hide the overlay
+        });
+      });
+
       function showMobileNav() {
         const mobileNav = document.querySelector(".navbar-mobile");
         mobileNav.style.display = "flex";
